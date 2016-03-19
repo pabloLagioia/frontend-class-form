@@ -1,47 +1,59 @@
 <!DOCTYPE>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8">
     <title>Formulario</title>
-
     <script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="style.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  
+    
     <script type="text/javascript" src="main.js"></script>
-
-</head>
-<body class="container">
-  <h1>My Pagina Web</h1>
-  <div class="jumbotron">
-    <form id="contact-form">
-      <h2>Formulario de contacto</h2>
-      <div class="form-group">
-        <label for="first-name" class="control-label">* Nombre</label>
-        <input type="text" class="form-control" id="first-name" placeholder="ej: Pablo">
-      </div>
-      <div class="form-group">
-        <label for="last-name" class="control-label">* Apellido</label>
-        <input type="text" class="form-control" id="last-name" placeholder="ej: Lagioia">
-      </div>
-      <div class="form-group">
-        <label for="email" class="control-label">* Email address</label>
-        <input type="email" class="form-control" id="email" placeholder="ej: pablo.lagioia@gmail.com">
-      </div>
-      <div class="form-group">
-        <label for="message" class="control-label">* Consulta</label>
-        <textarea rows="6" class="form-control" id="message" placeholder="ej: Hola queria saber..."></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary pull-right">Submit</button>
-      <span class="help-block">* Indica que el campo es requerido</span>
-    </form>
-  </div>
-</body>
+  </head>
+  <body class="container">
+    <h1>My Pagina Web</h1>
+    <div class="jumbotron">
+      <form id="contact-form">
+        <h2>Formulario de contacto</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group tooltip-container">
+              <label for="first-name" class="control-label">* Nombre</label>
+              <input type="text" class="form-control" id="first-name" placeholder="ej: Pablo">
+              <div class="tooltip-custom hidden">El nombre es un campo requerido, por favor ingrese un valor</div>
+            </div>
+            <div class="form-group tooltip-container">
+              <label for="last-name" class="control-label">* Apellido</label>
+              <input type="text" class="form-control" id="last-name" placeholder="ej: Lagioia">
+              <div class="tooltip-custom hidden">El apellido es un campo requerido, por favor ingrese un valor</div>
+            </div>
+            <div class="form-group tooltip-container">
+              <label for="email" class="control-label">* Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="ej: pablo.lagioia@gmail.com">
+              <div class="tooltip-custom hidden" data-type="no-email">El email es un campo requerido, por favor ingrese un valor</div>
+              <div class="tooltip-custom hidden" data-type="invalid-email">El valor ingresado no es un email valido</div>
+            </div>
+            <div class="form-group tooltip-container">
+              <label for="message" class="control-label">* Consulta</label>
+              <textarea rows="6" class="form-control" id="message" placeholder="ej: Hola queria saber..."></textarea>
+              <div class="tooltip-custom hidden">El mensaje es un campo requerido, por favor ingrese un valor</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13139.115973539554!2d-58.4230539!3d-34.5844583!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0xc97888d335093e8a!2sPlaza+Serrano!5e0!3m2!1ses-419!2sar!4v1458402814538" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="row padding-10">
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-primary pull-right">Submit</button>
+            <span class="help-block">* Indica que el campo es requerido</span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>

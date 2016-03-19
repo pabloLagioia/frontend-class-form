@@ -1,0 +1,41 @@
+body {
+  font-family: sans-serif;
+}
+
+.tooltip-container {
+  position: relative;
+}
+
+/* Tooltip */
+.tooltip-custom {
+  position: absolute;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  max-width: 100px;
+  top: 45%;
+  right: -110px;
+}
+
+/* Arrow */
+.tooltip-custom:after {
+  content: " ";
+  position: absolute;
+  top: 10px;
+  left: -5%;
+  margin-left: -4px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+.map {
+  width: 100%;
+  min-height: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.padding-10 {
+  padding: 10px;
+}
