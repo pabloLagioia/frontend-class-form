@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  //FIXME: El tooltip tiene que aparecer una sola vez
+
   $("#contact-form #first-name").on("blur", function() {
     validate.firstName();
   });
