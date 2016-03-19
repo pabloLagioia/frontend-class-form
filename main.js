@@ -58,8 +58,11 @@ $(document).ready(function() {
       formGroupMessage.addClass("has-success");
     }
 
-    //Aca va el codigo para mandar el mail
-    throw new Error("Not implemented yet");
+    emailjs.send("default_service", "template_1b1vJUt8", {
+      from_name: [firstName.val(), lastName.val()].join(" "),
+      to_email: email.val(),
+      "message_html": message.val()
+    });
 
   });
 
