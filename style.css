@@ -8,6 +8,7 @@ body {
 
 /* Tooltip */
 .tooltip-custom {
+  z-index: 1;
   position: absolute;
   text-align: center;
   background-color: #000;
