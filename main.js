@@ -10,7 +10,7 @@ $(document).ready(function() {
     var message = $("#message").val();
 
     if (!firstName) {
-      alert("Debe escribir un nombre");
+      $("#first-name").parents(".form-group").addClass("has-error");
       return;
     }
     if (!lastName) {
